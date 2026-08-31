@@ -10,10 +10,11 @@
 /* 
 1. 변수 
 선언과 할당으로 변수를 만들 수 있습니다. 
-- var
-- let
-- const 
+- var 매번 만들고 지우기 가능
+- let 값 바꾸기 가능 새로 지우거나 넣기 불가능
+- const 고정
 */
+let a = 1;
 
 
 
@@ -30,25 +31,36 @@
 - 숫자, _, $을 변수명에 사용 가능합니다. 근데 숫자는 맨 앞에는 들어올 수 없습니다.
 - 공백, 마침표, 자바스크립트가 이미 쓰는 keyword(예약어)는 불가합니다.
 
+var _num_fi1x = 1
+
 3. 자료형 
 - 기본자료형(primitive, 원시자료형), 참조자료형(reference, JS에서는 모두 object로 찍힘)  
-  - number(숫자)
+  - number(숫자) 소수, 정수 포함
   - string(문자열)
   - boolean: true, false로 반환
   - null: 값이 없음. 자료형은 object로 찍힘. 웬만하면 우리가 작성하는 빈방에는 null로 채웁니다.
   - undefined: 정의되지 않음
       - 값을 대입하지 않은 변수 / 리턴이 없는 함수의 실행 결과 / 존재하지 않는 속성을 가리킬 때 자바스크립트가 돌려주는 결과
   - symbol: 고유하고 변경할 수 없는 값. 
+  - bigint: 안전한 정수 범위를 넘어서는 정수값을 표현할 수 있는 자료형. 2^53-1까지 안전하게 표현 가능.
   - object: 객체
     - 배열, 날짜, 함수, Map, Set, 정규식
 */
+// var num1 = 1
+// typeof num1; // number
+// console.log(typeof(num1)); // number
 
+// var str = "'안녕하세요'"
+// console.log(str); // string
 
 // -3. boolean - 소문자로 작성합니다: true / false
 
 
 // -4. null
 // 'object'로 자료형이 찍힘. 자바스크립트의 자체 버그. 그러나 그대로 유지되고 있습니다.
+//null 개발자가 의도적으로 값이 없음을 명시할 때 사용합니다.
+//undefined - 자바스크립트가 의도적으로 값이 없음을 명시할 때 사용합니다.
+
 
 
 /* 실습:
@@ -60,6 +72,10 @@ mathScore 라는 변수에 수학점수, engScore라는 변수에 영어점수�
 그 결과를 avgScore라는 변수에 (mathScore+engScore)/2 
 평균값을 저장합니다. 
  */ 
+// console.log(Number("평균80"));
+// var mathScore = prompt("수학점수와 영어점수 입력하세요");
+// var engScore = prompt("영어점수를 입력하세요");
+// var avgScore = (Number(mathScore) + Number(engScore)) / 2;
 
 
 
@@ -72,12 +88,19 @@ mathScore 라는 변수에 수학점수, engScore라는 변수에 영어점수�
   6) ++, --   a -=  1   a--(후위식) / --a(전위식)
 */
 
+num  = 0
+console.log(++num); // 0
 
 
 /* 5. 비교연산자
 == (항등연산자, 동등성 비교): 값이 같은지
 === (완전항등연산자, 동일성 비교): 자료형, 값까지 비교
+=== 을 권장합니다.
+
 */
+
+
+
 
 /* 
 6. 논리연산자 &&(and), ||(or), !(not) 
@@ -100,6 +123,33 @@ mathScore 라는 변수에 수학점수, engScore라는 변수에 영어점수�
 // date.getHours(); // 0 ~ 23
 // date.getMinutes(); // 0 ~ 59
 
+// let hours = date.getHours();
+
+// if (hours < 12) {
+//   console.log(`AM ${hours} 시`)
+//   // else 이면 PM 
+// } else {
+//   console.log(`PM ${hours} 시`)
+// }
+
+
+// const now = new Date();
+
+
+
+// const koreaHour = new Intl.DateTimeFormat("ko-KR", {
+//   timeZone: "Asia/Seoul",
+//   hour: "2-digit",
+//   hour12: false
+// }).format(now);
+
+// const hour = Number(koreaHour);
+
+// if (hour < 12) {
+//   console.log("AM");
+// } else {
+//   console.log("PM");
+// }
 
 /* swtich (명제) {
     case (1) : 조건 만족시 실행문
@@ -111,6 +161,50 @@ mathScore 라는 변수에 수학점수, engScore라는 변수에 영어점수�
 }
 */
 
+var menu = "마라탕";
+
+// switch (menu) {
+//   case "짜장면":
+//     console.log(menu + "을 드시는군요.");
+//     break;
+//   case "짬뽕":
+//     console.log(menu + "을 드시는군요.");
+//     break;
+//   case "샐러드":
+//     console.log(menu + "을 드시는군요.");
+    
+//   default:
+//     console.log("그럼 뭐 드실래요?");
+//     break;
+// }
+
+if (menu === "짜장면")
+{
+  console.log(menu + "을 드시는군요.");
+}
+else if (menu === "짬뽕")
+{
+  console.log(menu + "을 드시는군요.");
+}
+else if (menu === "샐러드")
+{
+  console.log(menu + "을 드시는군요.");
+}
+else
+{
+  console.log("그럼 뭐 드실래요?");
+}
+
+
+if (menu === "짜장면" || menu === "짬뽕" || menu === "샐러드") {
+  console.log(menu + "을 드시는군요.");
+} else {
+  console.log("그럼 뭐 드실래요?");
+}
+
+
+if (menu === "짜장면" || menu === "짬뽕" || menu === "샐러드") ? 
+console.log(menu + "을 드시는군요.") : console.log("그럼 뭐 드실래요?");
 
 
 /* 실습2: if / switch 문으로 각각 작성해보세요.

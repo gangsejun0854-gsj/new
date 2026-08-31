@@ -1,25 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>계좌 목록</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f5f7fb;
+      font-family: "Malgun Gothic", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    .account-wrap {
+      width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .account-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 22px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .account-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .bank-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .account-number {
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .money {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .account-footer {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      flex: 1;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-transfer {
+      background: #1f6feb;
+      color: white;
+    }
+
+    .btn-detail {
+      background: #eef2ff;
+      color: #1f2937;
+    }
+  </style>
 </head>
 <body>
-    <article>
-    <header>
-        <h2>우리은행</h2>
-    </header>
-
-    <section>
-        <p>1002-***-******</p>
-        <p><strong>1,500,000 원</strong></p>
-    </section>
-
-    <footer>
-        <button type="button">이체</button>
-        <button type="button">상세</button>
-    </footer>
+  <div class="account-wrap">
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">1,500,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
     </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">820,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">2,300,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">500,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">3,100,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">1,200,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">910,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">2,750,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">1,600,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">730,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">4,200,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+
+    <article class="account-card">
+      <div class="account-header">
+        <div class="bank-name">우리은행</div>
+      </div>
+      <div class="account-number">1002-***-******</div>
+      <div class="money">2,000,000 원</div>
+      <div class="account-footer">
+        <button class="btn-transfer" type="button">이체</button>
+        <button class="btn-detail" type="button">상세</button>
+      </div>
+    </article>
+  </div>
 </body>
 </html>

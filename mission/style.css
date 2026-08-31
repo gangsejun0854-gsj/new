@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+
+.img-comp-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.img-comp-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+  width: 300px;
+  height: 200px;
+}
+
+/* 아래쪽 이미지 */
+.z_index_forest {
+  z-index: 1;
+}
+
+/* 위쪽 이미지 */
+.z_index_snow {
+  z-index: 2;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}

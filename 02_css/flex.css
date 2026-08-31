@@ -1,13 +1,27 @@
 body {
     margin: 0px;
 }
-
+/* flex를 지정해놓은 부모 컨테이너 안에 있는 자식 요소들은 flex의 영향을 받는다. */
 /* 기준이 되는 부모 컨테이너에서 flex를 지정해놓고 */
 .container {
-    border: black solid 3px;
+    height: 100vh;
+    display: flex;
+    /*중심 축 정하는 옵션*/
+    /*flex-direction: row; /*row, column, row-reverse, column-reverse*/
+    justify-content: space-evenly; /*wrap, nowrap, wrap-reverse*/
+    align-items: flex-end; /*flex-start, flex-end, center, baseline, stretch*/
 }
-
+/* 필요한 경우 order를 지정해서 순서를 바꿀 수 있다. */
 /* 일괄적으로 특정 위치의 값만 선택할 때 odd, even */
 .item:nth-child(even) {
     border: black dashed;
+}
+
+#item4{
+    order: -1;
+    flex-basis: 30% ;/*특정 아이템의 차지하는 비율*/
+}
+
+#item5{
+    order: -2;
 }

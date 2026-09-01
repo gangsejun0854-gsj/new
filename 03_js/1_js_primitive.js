@@ -88,8 +88,8 @@ mathScore 라는 변수에 수학점수, engScore라는 변수에 영어점수�
   6) ++, --   a -=  1   a--(후위식) / --a(전위식)
 */
 
-num  = 0
-console.log(++num); // 0
+// num  = 0
+// console.log(++num); // 0
 
 
 /* 5. 비교연산자
@@ -178,34 +178,48 @@ var menu = "마라탕";
 //     break;
 // }
 
-if (menu === "짜장면")
-{
-  console.log(menu + "을 드시는군요.");
-}
-else if (menu === "짬뽕")
-{
-  console.log(menu + "을 드시는군요.");
-}
-else if (menu === "샐러드")
-{
-  console.log(menu + "을 드시는군요.");
-}
-else
-{
-  console.log("그럼 뭐 드실래요?");
-}
+// if (menu === "짜장면")
+// {
+//   console.log(menu + "을 드시는군요.");
+// }
+// else if (menu === "짬뽕")
+// {
+//   console.log(menu + "을 드시는군요.");
+// }
+// else if (menu === "샐러드")
+// {
+//   console.log(menu + "을 드시는군요.");
+// }
+// else
+// {
+//   console.log("그럼 뭐 드실래요?");
+// }
 
 
-if (menu === "짜장면" || menu === "짬뽕" || menu === "샐러드") {
-  console.log(menu + "을 드시는군요.");
-} else {
-  console.log("그럼 뭐 드실래요?");
-}
+// if (menu === "짜장면" || menu === "짬뽕" || menu === "샐러드") {
+//   console.log(menu + "을 드시는군요.");
+// } else {
+//   console.log("그럼 뭐 드실래요?");
+// }
 
 
-if (menu === "짜장면" || menu === "짬뽕" || menu === "샐러드") ? 
-console.log(menu + "을 드시는군요.") : console.log("그럼 뭐 드실래요?");
+// (menu === "짜장면" || menu === "짬뽕" || menu === "샐러드") ? console.log(menu + "을 드시는군요.") : console.log("그럼 뭐 드실래요?");
 
+// // 복합조건문: 연산자 && (and) / || (or) / ! (not) 으로 여러개 조건을 한번에 비교할 수 있습니다.
+// if (menu === "짜장면" || menu === "짬뽕" || menu === "샐러드") { // 조건1 
+//   console.log(menu + "를 드시는군요.") // 참일 경우의 동작은 같으므로 
+// } else {
+//     console.log("그럼 뭐 드실래요?")
+// }
+
+// console.log("------------맨 앞의 값만을 가지고 사용한다. --------------")
+// switch (menu) {
+//   case ("짜장면" || "짬뽕" || "샐러드"): // 맨 앞의 것만 비교하고 아니면 넘어갑니다.(단락평가)
+//     console.log(menu + "를 드시는군요 ")   
+//     break;   
+//   default: // 셋 다 참이 아닐 경우 (else)
+//     console.log("그럼 뭐 드실래요?")
+// } 
 
 /* 실습2: if / switch 문으로 각각 작성해보세요.
 1. 짜장면  2. 짬뽕   3. 샐러드 중 하나를 받으면 
@@ -214,3 +228,50 @@ menu + 를 드시는군요. 를 출력
 
 
 // 삼항연산자 - 불표현식 ? 참 : 거짓
+
+// 1. var age라는 변수에 나이를 입력받고, 나이가 18보다 적으면 미성년자 18 이상이면 성인을 출력하는 조건문
+
+// 2. 나이가 13살 미만이면 어린이 / 18 미만이면 미성년자 / 18 이상이면 성인
+
+// console.log("------------삼항연산자--------------")
+
+// 1. var age = Number(prompt("나이를 입력하세요."));
+// age < 18 ? console.log("미성년자") : console.log("성인");
+
+
+// if (age < 13) {
+//   console.log("어린이");
+// } else if (age < 18) {
+//   console.log("미성년자");
+// } else {
+//   console.log("성인");
+// }
+
+// var age = -1;
+
+// // if (0 < age < 18) { 자바스크립트에서는 비교 불가}
+// if (0 < age && age < 18) {
+//   console.log("미성년자");
+// } 
+// else if (age >= 18) {
+//   console.log("성인");
+// }
+// else {
+//   console.log("잘못된 나이입니다.");
+// }
+
+var array = ["apple", "banana", "carrot"];
+console.log(array[0]); // apple
+console.log(array[1]); // banana
+console.log(array[2]); // carrot
+console.log(array);
+
+array.push("donut"); // 배열의 맨 뒤에 donut 추가
+array.splice(1,1 , "bee", "betray"); // 배열의 1번 인덱스부터 1개를 삭제하고 blueberry를 추가
+console.log(array);
+
+array.sort(); // 배열을 오름차순으로 정렬
+console.log(array);
+
+array2 = [2,5,78,6,4,1,3,9,0];
+array2.sort();

@@ -32,7 +32,50 @@
     - set() get()으로 삽입, 조회를 할 수 있습니다.
     - 뎁스가 복잡하거나, 데이터의 입력 순서, 양이 많을 때 
 */
+ var dict2 = {"가": "가위", "나": "나비", "다": "다람쥐", "라": "라디오", 1 : 1010, true :{ "참":true}}
+// console.log(dict2[1]); // 1010
+// console.log(dict2[true]["참"]); // { 참: true }
+// dict2['가']="가랑이"
+// console.log(dict2['가']); // 가랑
+// delete dict2['가'];
+// console.log('fk' in dict2)
+// console.log('라디오' in dict2)
+// console.log(Object.keys(dict2));//자체적으로 키를 문자열로 바꿈
+// console.log(Object.values(dict2));//자체적으로 값을 배열로 바꿈
+// console.log(Object.entries(dict2));//자체적으로 키와 값을 배열로 바꿈
+// //JSON: JavaScript Object Notation: "{'name':'김연지', 'age':'20'}"
+var map1 = new Map();
+map1.set("가", "가위");
+map1.set("나", "나비");
+map1.set("다", "다람쥐");
+// map1.delete("나");
+// console.log(map1); // false
+// console.log([...map1.keys()]); // [ '가', '다' ]
 
+// for(var i =1; i<6; i+2){
+//   for( j = 1; j<10; j++){
+//     console.log(i+"*"+j+"="+i*j);
+// }
+// }
+
+// var arr = ['짱구', '짱아', '훈이']
+// for (var i = 0; i < arr.length; i++) {
+//   console.log(arr[i]+"야 안녕");
+//   console.log(`${arr[i]}야, 안녕!`);
+// }
+
+// for(var key in dict2){
+//   console.log(key, dict2[key]);
+// }
+
+// for (var [key, value] of map1) {
+//   console.log(key, value);
+// }
+
+// console.log(map1.size); // 3
+// `${arr[i]}야, 안녕!`
+// for of 문법은 안에 존재하는 값 이용
+// for in 문법은 true false 
 
 /*
 9. 반복문: for/while
@@ -79,7 +122,57 @@
 -3. 화살표함수: () => { 동작 }
 */
 
-var arr = ['짱구', '짱아', '훈이']
+// var i = 5;
+// while(i > 0) {
+//   console.log(i);
+//   i -= 2;
+// }
+// var i = 1;
+// while (true) {
+//   console.log(i)
+//   i++;
+//   if (i > 5) {
+//     break; // break는 특수한 키워드로 break를 만나는 순간 { } 바깥으로 인터프리터가 빠져나갑니다.
+//   }
+// }
+
+// var i = 5;
+// while (true) {
+//   console.log(i)
+//   i -=2;
+//   if (i < 0) {
+//     break; // break는 특수한 키워드로 break를 만나는 순간 { } 바깥으로 인터프리터가 빠져나갑니다.
+//   }
+// }
+
+// arr = ['apple', 'banana', 'carrot'];
+// while (arr.length > 0) {
+//   console.log(arr.pop());
+// }f
+
+
+
+
+//var arr = ['짱구', '짱아', '훈이']
+
+
+
+// parameter: 함수에 전달되는 값
+function hello(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+hello('짱구'); // Hello, 짱구!
+
+function hello2(이름, 나이) {
+  return `${이름} 님, 안녕하세요. ${나이}살이시군요.`;
+}
+
+var h2 = hello2('짱아', 10);
+console.log(h2); // 짱아 님, 안녕하세요. 10살이시군요.
+var h1 = hello(짱구); // Hello, 짱구!
+console.log(h1); // undefined (hello 함수는 return이 없으므로 undefined를 반환합니다.)
+
 
 // -4. 함수의 스코프
 //     1. 스코프 : 변수나 함수가 어디까지 접근해서 사용할 수 있는지. 

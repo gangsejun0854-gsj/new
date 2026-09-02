@@ -274,4 +274,27 @@ array.sort(); // 배열을 오름차순으로 정렬
 console.log(array);
 
 array2 = [2,5,78,6,4,1,3,9,0];
-array2.sort();
+array2.sort((a, b) => a - b);
+console.log(array2);
+
+set1 = [1,5,3,5,6,7,8,9,1,2,3,4,5,6,7,8,9]; 
+
+set1 = new Set(set1); // 중복제거
+console.log(set1);
+set1.add(10); // set에 10 추가
+console.log(set1);
+set1.delete(5); // set에서 5 삭제
+console.log(set1);
+
+var dic1 = {
+  "name": "홍길동",
+  "age": 20,
+  "gender": ["남자",여자]
+};
+
+console.log(dic1.name); // 홍길동
+console.log(dic1.age); // 20
+console.log(dic1.gender[1]); // 여자
+
+dic1.age = 21; // age 값 변경
+console.log(dic1.age); // 21
